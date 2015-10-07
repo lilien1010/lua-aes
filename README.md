@@ -4,12 +4,12 @@ like aes mcrypt with ECB mode,
 so  I create this.
 
 like encrypt with PHP:
-```ruby
+```php
 mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $key,$text, MCRYPT_MODE_ECB );
 ```
 
 encrypt with lua:
-```
+```lua
 local data      =   'wait to be encrypted'
 local key       =   '01234567890123456' --length is 16
 local mc_ecb    = require("resty.ecb_mcrypt")
@@ -22,5 +22,7 @@ ngx.print(enc_data)
 
 mean while,you will need to install libmcrypt,
 because the lua-aes will load  the libmcrypt with FFI,
-
-try: yum install libmcrypt libmcrypt-devel
+try to install libmcrypt
+```
+yum install libmcrypt libmcrypt-devel
+```
